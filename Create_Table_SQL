@@ -1,0 +1,25 @@
+DROP TABLE IF EXISTS src.player_location;
+CREATE TABLE IF NOT EXISTS src.player_location (
+	game_date_gen DATE,
+	v_team_gen VARCHAR,
+	h_team_gen VARCHAR,
+	team_gen VARCHAR,
+	player_name_gen VARCHAR,
+	period INTEGER,
+	time_from_zero INTEGER,
+	x NUMERIC,
+	y NUMERIC
+);
+
+DROP TABLE IF EXISTS src.player_event;
+CREATE TABLE IF NOT EXISTS src.player_event (
+	game_date_gen DATE,
+	v_team_gen VARCHAR,
+	h_team_gen VARCHAR,
+	period_desc VARCHAR,
+	time_from_zero NUMERIC,
+	event_type VARCHAR,
+	player_name_1_gen VARCHAR,
+	player_name_2_gen VARCHAR,
+	player_1_team_gen VARCHAR,
+	player_2_team_gen VARCHAR
